@@ -14,100 +14,100 @@
 <body>
     <div class="flex-row align-center justify-center min-100-vh bg-primary">
         <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
-            <header>
+            <header class="header">
                 <h1>My Weather Dashboard</h1>
             </header>
-            <h2 class="text-primary">Search for a City:</h2>
-            <form id="search-box" class="form w-100">
-                <input id="search-input" class="form-input w-100" type="text" placeholder="Beauvais">
-                <button class="search-btn">Search</button>
-            </form>
-            <ul>
-                <li><button>Valencia</button></li>
-                <li><button>Tuscany</button></li>
-                <li><button>Lisbon</button></li>
-            </ul>
-            <div class="searched-city">
-                <div class="current-weather" id="todaysCard">
-                    <h3>city name placeholder</h3>
-                    <p id="todaysDate">today's date placeholder</p>
-                    <p id="todaysIcon">icon placeholder</p>
-
-                    <ul class="list-group">
-                        <li class="list-group-item">Temp: </li>
-                        <li class="list-group-item">Wind: </li>
-                        <li class="list-group-item">Humidity: </li>
+            <div class="dynamic-content">
+                <div class="sidebar">
+                    <h2 class="sidebar-header">Search for a City:</h2>
+                    <form class="form" id="search-box">
+                        <input class="form-input" id="search-input" type="text" placeholder="Beauvais">
+                        <button class="search-btn">Search</button>
+                    </form>
+                    <ul class="searched-list-group">
+                        <li><button>Valencia</button></li>
+                        <li><button>Tuscany</button></li>
+                        <li><button>Lisbon</button></li>
                     </ul>
                 </div>
-                <div class="5-day-forecast">
-                    <h3>5-Day Forecast:</h3>
-                    <card class="forecast-card" id="firstCard">
-                        <div class="card-header">
-                            <h4 class="card-title">date placeholder</h4>
+
+                <div class="searched-city">
+                    <div class="current-weather" id="todaysCard">
+                        <div class="current-weather-header">
+                            <h3>city name</h3>
+                            <p id="todaysDate">today's date</p>
+                            <p id="todaysIcon">weather icon</p>
                         </div>
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item icon">icon placeholder</li>
-                                <li class="list-group-item">Temp: </li>
-                                <li class="list-group-item">Wind: </li>
-                                <li class="list-group-item">Humidity: </li>
-                            </ul>
+
+                        <ul class="list-group">
+                            <li class="list-group-item">Temp: </li>
+                            <li class="list-group-item">Wind: </li>
+                            <li class="list-group-item">Humidity: </li>
+                        </ul>
+                    </div>
+                    <div class="forecast">
+                        <h3>5-Day Forecast:</h3>
+                        <div class="card-container">
+                            <card class="forecast-card" id="firstCard">
+                                <h4 class="card-title">date</h4>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item icon">icon</li>
+                                        <li class="list-group-item">Temp: </li>
+                                        <li class="list-group-item">Wind: </li>
+                                        <li class="list-group-item">Humidity: </li>
+                                    </ul>
+                                </div>
+                            </card>
+                            <card class="forecast-card" id="secondCard">
+                                <h4 class="card-title">date</h4>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item icon">icon</li>
+                                        <li class="list-group-item">Temp: </li>
+                                        <li class="list-group-item">Wind: </li>
+                                        <li class="list-group-item">Humidity: </li>
+                                    </ul>
+                                </div>
+                            </card>
+                            <card class="forecast-card" id="thirdCard">
+                                <h4 class="card-title">date</h4>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item icon">icon</li>
+                                        <li class="list-group-item">Temp: </li>
+                                        <li class="list-group-item">Wind: </li>
+                                        <li class="list-group-item">Humidity: </li>
+                                    </ul>
+                                </div>
+                            </card>
+                            <card class="forecast-card" id="forthCard">
+                                <h4 class="card-title">date</h4>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item icon">icon</li>
+                                        <li class="list-group-item">Temp: </li>
+                                        <li class="list-group-item">Wind: </li>
+                                        <li class="list-group-item">Humidity: </li>
+                                    </ul>
+                                </div>
+                            </card>
+                            <card class="forecast-card" id="fifthCard">
+                                <h4 class="card-title">date</h4>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item icon">icon</li>
+                                        <li class="list-group-item">Temp: </li>
+                                        <li class="list-group-item">Wind: </li>
+                                        <li class="list-group-item">Humidity: </li>
+                                    </ul>
+                                </div>
+                            </card>
                         </div>
-                    </card>
-                    <card class="forecast-card" id="secondCard">
-                        <div class="card-header">
-                            <h4 class="card-title">date placeholder</h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item icon">icon placeholder</li>
-                                <li class="list-group-item">Temp: </li>
-                                <li class="list-group-item">Wind: </li>
-                                <li class="list-group-item">Humidity: </li>
-                            </ul>
-                        </div>
-                    </card>
-                    <card class="forecast-card" id="thirdCard">
-                        <div class="card-header">
-                            <h4 class="card-title">date placeholder</h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item icon">icon placeholder</li>
-                                <li class="list-group-item">Temp: </li>
-                                <li class="list-group-item">Wind: </li>
-                                <li class="list-group-item">Humidity: </li>
-                            </ul>
-                        </div>
-                    </card>
-                    <card class="forecast-card" id="forthCard">
-                        <div class="card-header">
-                            <h4 class="card-title">date placeholder</h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item icon">icon placeholder</li>
-                                <li class="list-group-item">Temp: </li>
-                                <li class="list-group-item">Wind: </li>
-                                <li class="list-group-item">Humidity: </li>
-                            </ul>
-                        </div>
-                    </card>
-                    <card class="forecast-card" id="fifthCard">
-                        <div class="card-header">
-                            <h4 class="card-title">date placeholder</h4>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item icon">icon placeholder</li>
-                                <li class="list-group-item">Temp: </li>
-                                <li class="list-group-item">Wind: </li>
-                                <li class="list-group-item">Humidity: </li>
-                            </ul>
-                        </div>
-                    </card>
+                    </div>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -115,4 +115,4 @@
     <script src="./assets/js/script.js"></script>
 </body>
 
-</html>
+</html
