@@ -1,0 +1,182 @@
+/* need to add: */
+/* comments */
+/* common colors and margins, etc. to use --var */
+/* adjustments for screen widths */
+/* text styling (bold, font, size, etc.) */
+/* for when screen size is smaller, indicate the smallest size .card-container will go before they wrap around & then indicate the new size and positioning once they've wrapped */
+
+
+/* header section */
+.header {
+    border: solid black 5px;
+    background-color: rgb(164, 29, 141);
+    color: white;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+/* body section (minus header) */
+.dynamic-content {
+    display: flex;
+}
+
+/* sidebar section */
+.sidebar {    
+    border: solid black 5px;
+    background-color: rgb(14, 139, 201);
+    margin: 5px;
+    width: 25%;
+}
+
+    .sidebar-header {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        padding: 5px;
+        /* border: 2px solid black; */
+        color: white;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        padding: 5px;
+        /* border: 2px solid black; */
+    }
+
+        .form-input, .search-btn {
+            border: 2px solid rgb(164, 29, 141);
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px 15px;
+        }
+
+        .search-btn:hover {
+            cursor: pointer;
+        }
+
+        .search-btn:focus {
+            font-weight: bold;
+        }
+
+    .searched-list-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        margin: 5px;
+        padding: 0;
+        /* border: 2px solid black; */
+    }
+
+        .searched-list-group button {
+            border: 2px solid rgb(164, 29, 141);
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px 15px;
+        }
+
+        .searched-list-group button:hover {
+            cursor: pointer;
+        }
+
+        .searched-list-group button:focus {
+            font-weight: bold;
+        }
+
+/* searched city display section */
+.searched-city {
+    border: solid black 5px;
+    background-color: rgb(255, 208, 0);
+    margin: 5px;
+    padding: 5px;
+    width: 75%;
+}
+
+    .current-weather {
+        border: solid black 5px;
+        background-color: rgb(14, 139, 201);
+        color: white;
+        margin: 5px;
+        padding: 5px;
+    }
+
+        .current-weather-header {
+            /* border: solid black 2px; */
+            background-color: rgb(14, 139, 201);
+            margin: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .current-weather-header h3 {
+            margin: 5px 15px;
+        }
+
+        .current-weather-header p {
+            /* border: 2px solid black; */
+            margin: 5px;
+        }
+
+        /* these also styles elements in forecast */
+        .list-group {
+            list-style: none;
+            margin: 5px;
+            /* border: 2px solid black; */
+            padding: 0;
+        }
+        
+            .list-group-item {
+                margin: 5px;
+                padding: 5px;
+                /* border: 2px solid black; */
+            }
+
+
+
+
+    .forecast {
+        border: solid black 5px;
+        background-color: rgb(164, 29, 141);
+        margin: 5px;
+        padding: 5px;
+    }
+
+        .forecast h3 {
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 200%;
+            /* border: 2px solid black; */
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border: solid black 2px;
+            background-color: rgb(14, 139, 201);
+            color: white;
+            margin: 5px;
+            padding: 5px;
+        }
+
+            .forecast-card {
+                border: solid black 2px;
+                background-color: rgb(255, 208, 0);
+                margin: 5px;
+                padding: 5px;
+                width: 15%;
+            }
+
+            .card-title {
+                display: flex;
+                justify-content: center;
+                /* border: 2px solid black; */
+                margin: 10px 5px;
+                padding: 5px;
+            }
