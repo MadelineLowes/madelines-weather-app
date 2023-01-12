@@ -5,114 +5,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Madeline's Weather App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/jass.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    </style>
+
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <div class="flex-row align-center justify-center min-100-vh bg-primary">
-        <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
-            <header class="header">
-                <h1>My Weather Dashboard</h1>
-            </header>
-            <div class="dynamic-content">
-                <div class="sidebar">
-                    <h2 class="sidebar-header">Search for a City:</h2>
-                    <form class="form" id="search-box">
-                        <input class="form-input" id="search-input" type="text" placeholder="Beauvais">
-                        <button class="search-btn">Search</button>
-                    </form>
-                    <ul class="searched-list-group">
-                        <li><button>Valencia</button></li>
-                        <li><button>Tuscany</button></li>
-                        <li><button>Lisbon</button></li>
-                    </ul>
+    <header class="header">
+        <h1>My Weather Dashboard</h1>
+    </header>
+    <div class="dynamic-content">
+        <div class="sidebar">
+            <h2 class="sidebar-header">Search for a City:</h2>
+
+            <form class="form" id="searchBox">
+                <input class="form-input" style="font-family: Merriweather, serif" id="searchInput" type="text"
+                    placeholder="Toronto">
+                <button class="search-btn" style="font-family: Merriweather, serif" id="search-btn" type="button"
+                    onclick="searchbarBtn()">Search</button>
+            </form>
+
+            <ul class="searched-list-group" id="cityList"></ul>
+        </div>
+
+        <div class="searched-city">
+            <div class="current-weather" id="todaysCard">
+                <div class="current-weather-header">
+                    <h3 id="cityName">City Name</h3>
+                    <p id="title0">Today's Date</p>
+                    <img class="iconHeader" id="icon0" src=""></img>
                 </div>
 
-                <div class="searched-city">
-                    <div class="current-weather" id="todaysCard">
-                        <div class="current-weather-header">
-                            <h3>city name</h3>
-                            <p id="todaysDate">today's date</p>
-                            <p id="todaysIcon">weather icon</p>
+                <ul class="list-group">
+                    <li class="list-group-item" id="temp0">Temp: </li>
+                    <li class="list-group-item" id="wind0">Wind: </li>
+                    <li class="list-group-item" id="humidity0">Humidity: </li>
+                </ul>
+            </div>
+            <div class="forecast">
+                <h3>5-Day Forecast:</h3>
+                <div class="card-container">
+                    <card class="forecast-card" id="card1">
+                        <h4 class="card-title" id="title1">Date</h4>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li><img class="list-group-item icon" id="icon1" src=""></img></li>
+                                <li class="list-group-item" id="temp1">Temp: </li>
+                                <li class="list-group-item" id="wind1">Wind: </li>
+                                <li class="list-group-item" id="humidity1">Humidity: </li>
+                            </ul>
                         </div>
-
-                        <ul class="list-group">
-                            <li class="list-group-item">Temp: </li>
-                            <li class="list-group-item">Wind: </li>
-                            <li class="list-group-item">Humidity: </li>
-                        </ul>
-                    </div>
-                    <div class="forecast">
-                        <h3>5-Day Forecast:</h3>
-                        <div class="card-container">
-                            <card class="forecast-card" id="firstCard">
-                                <h4 class="card-title">date</h4>
-                                <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item icon">icon</li>
-                                        <li class="list-group-item">Temp: </li>
-                                        <li class="list-group-item">Wind: </li>
-                                        <li class="list-group-item">Humidity: </li>
-                                    </ul>
-                                </div>
-                            </card>
-                            <card class="forecast-card" id="secondCard">
-                                <h4 class="card-title">date</h4>
-                                <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item icon">icon</li>
-                                        <li class="list-group-item">Temp: </li>
-                                        <li class="list-group-item">Wind: </li>
-                                        <li class="list-group-item">Humidity: </li>
-                                    </ul>
-                                </div>
-                            </card>
-                            <card class="forecast-card" id="thirdCard">
-                                <h4 class="card-title">date</h4>
-                                <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item icon">icon</li>
-                                        <li class="list-group-item">Temp: </li>
-                                        <li class="list-group-item">Wind: </li>
-                                        <li class="list-group-item">Humidity: </li>
-                                    </ul>
-                                </div>
-                            </card>
-                            <card class="forecast-card" id="forthCard">
-                                <h4 class="card-title">date</h4>
-                                <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item icon">icon</li>
-                                        <li class="list-group-item">Temp: </li>
-                                        <li class="list-group-item">Wind: </li>
-                                        <li class="list-group-item">Humidity: </li>
-                                    </ul>
-                                </div>
-                            </card>
-                            <card class="forecast-card" id="fifthCard">
-                                <h4 class="card-title">date</h4>
-                                <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item icon">icon</li>
-                                        <li class="list-group-item">Temp: </li>
-                                        <li class="list-group-item">Wind: </li>
-                                        <li class="list-group-item">Humidity: </li>
-                                    </ul>
-                                </div>
-                            </card>
+                    </card>
+                    <card class="forecast-card" id="card2">
+                        <h4 class="card-title" id="title2">Date</h4>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li><img class="list-group-item icon" id="icon2" src=""></img></li>
+                                <li class="list-group-item" id="temp2">Temp: </li>
+                                <li class="list-group-item" id="wind2">Wind: </li>
+                                <li class="list-group-item" id="humidity2">Humidity: </li>
+                            </ul>
                         </div>
-                    </div>
+                    </card>
+                    <card class="forecast-card" id="card3">
+                        <h4 class="card-title" id="title3">Date</h4>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li><img class="list-group-item icon" id="icon3" src=""></img></li>
+                                <li class="list-group-item" id="temp3">Temp: </li>
+                                <li class="list-group-item" id="wind3">Wind: </li>
+                                <li class="list-group-item" id="humidity3">Humidity: </li>
+                            </ul>
+                        </div>
+                    </card>
+                    <card class="forecast-card" id="card4">
+                        <h4 class="card-title" id="title4">Date</h4>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li><img class="list-group-item icon" id="icon4" src=""></img></li>
+                                <li class="list-group-item" id="temp4">Temp: </li>
+                                <li class="list-group-item" id="wind4">Wind: </li>
+                                <li class="list-group-item" id="humidity4">Humidity: </li>
+                            </ul>
+                        </div>
+                    </card>
+                    <card class="forecast-card" id="card5">
+                        <h4 class="card-title" id="title5">Date</h4>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li><img class="list-group-item icon" id="icon5" src=""></img></li>
+                                <li class="list-group-item" id="temp5">Temp: </li>
+                                <li class="list-group-item" id="wind5">Wind: </li>
+                                <li class="list-group-item" id="humidity5">Humidity: </li>
+                            </ul>
+                        </div>
+                    </card>
                 </div>
             </div>
-
-
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
-
 </html

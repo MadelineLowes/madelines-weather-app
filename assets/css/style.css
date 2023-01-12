@@ -1,19 +1,23 @@
-/* need to add: */
-/* comments */
-/* common colors and margins, etc. to use --var */
-/* adjustments for screen widths */
-/* text styling (bold, font, size, etc.) */
-/* for when screen size is smaller, indicate the smallest size .card-container will go before they wrap around & then indicate the new size and positioning once they've wrapped */
+:root {
+    --pink: rgb(164, 29, 141);
+    --blue: rgb(14, 139, 201);
+    --yellow: rgb(255, 208, 0);
+    --border: solid black;
+    --m: 5px;
+}
 
+body {
+    font-family: 'Merriweather', serif;
+}
 
 /* header section */
 .header {
-    border: solid black 5px;
-    background-color: rgb(164, 29, 141);
-    color: white;
-    margin: 5px;
     display: flex;
     justify-content: center;
+    border: var(--m) var(--border);
+    background-color: var(--pink);
+    color: white;
+    margin: var(--m);
 }
 
 /* body section (minus header) */
@@ -22,161 +26,277 @@
 }
 
 /* sidebar section */
-.sidebar {    
-    border: solid black 5px;
-    background-color: rgb(14, 139, 201);
-    margin: 5px;
+.sidebar {
+    border: var(--m) var(--border);
+    background-color: var(--blue);
+    margin: var(--m);
     width: 25%;
 }
 
-    .sidebar-header {
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-        padding: 5px;
-        /* border: 2px solid black; */
-        color: white;
-    }
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    margin: var(--m);
+    padding: var(--m);
+    color: white;
+    font-size: 200%;
+}
 
-    .form {
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-        padding: 5px;
-        /* border: 2px solid black; */
-    }
+.form {
+    display: flex;
+    justify-content: center;
+    margin: var(--m);
+    padding: var(--m);
+}
 
-        .form-input, .search-btn {
-            border: 2px solid rgb(164, 29, 141);
-            border-radius: 10px;
-            margin: 5px;
-            padding: 5px 15px;
-        }
+.form-input,
+.search-btn {
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    margin: var(--m);
+    padding: 5px 15px;
+}
 
-        .search-btn:hover {
-            cursor: pointer;
-        }
+.search-btn:hover {
+    cursor: pointer;
+}
 
-        .search-btn:focus {
-            font-weight: bold;
-        }
+.search-btn:focus {
+    font-weight: bold;
+}
 
-    .searched-list-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        list-style: none;
-        margin: 5px;
-        padding: 0;
-        /* border: 2px solid black; */
-    }
+.searched-list-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: var(--m);
+    padding: 0;
+}
 
-        .searched-list-group button {
-            border: 2px solid rgb(164, 29, 141);
-            border-radius: 10px;
-            margin: 5px;
-            padding: 5px 15px;
-        }
+.searched-list-group button {
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    margin: var(--m);
+    padding: 5px 15px;
+}
 
-        .searched-list-group button:hover {
-            cursor: pointer;
-        }
+.searched-list-group button:hover {
+    cursor: pointer;
+}
 
-        .searched-list-group button:focus {
-            font-weight: bold;
-        }
+.searched-list-group button:focus {
+    font-weight: bold;
+}
 
 /* searched city display section */
 .searched-city {
-    border: solid black 5px;
-    background-color: rgb(255, 208, 0);
-    margin: 5px;
-    padding: 5px;
+    border: var(--m) var(--border);
+    background-color: var(--yellow);
+    margin:  var(--m);
+    padding:  var(--m);
     width: 75%;
 }
 
-    .current-weather {
-        border: solid black 5px;
-        background-color: rgb(14, 139, 201);
-        color: white;
-        margin: 5px;
-        padding: 5px;
+/* current weather styling */
+.current-weather {
+    border: var(--m) var(--border);
+    background-color: var(--blue);
+    color: white;
+    margin: var(--m);
+    padding: var(--m);
+}
+
+.current-weather-header {
+    background-color: var(--blue);
+    margin: var(--m);
+    display: flex;
+    align-items: center;
+    font-size: 150%;
+}
+
+.current-weather-header h3 {
+    margin: 5px 15px;
+}
+
+.current-weather-header p {
+    margin: var(--m);
+}
+
+.iconHeader {
+    height: 40px;
+    width: 40px;
+}
+
+/* these also styles elements in forecast */
+.list-group {
+    list-style: none;
+    margin: var(--m);
+    border-top: 2px var(--border);
+    padding: 0;
+}
+
+.list-group-item {
+    margin: var(--m);
+    padding: var(--m);
+    font-size: 110%;
+}
+
+/* forecast styling */
+.forecast {
+    border: var(--m) var(--border);
+    background-color: var(--pink);
+    margin: var(--m);
+    padding: var(--m);
+}
+
+.forecast h3 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 200%;
+    margin: 10px;
+    padding: var(--m);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 3px var(--border);
+    background-color: var(--blue);
+    margin: var(--m);
+    padding: var(--m);
+}
+
+.forecast-card {
+    background-color: var(--yellow);
+    border: 3px var(--border);
+    margin: var(--m);
+    padding: var(--m);
+    width: 15%;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px;
+    padding: var(--m);
+    font-size: 125%;
+}
+
+.icon {
+    width: 60%;
+    margin: 0 20%;
+    padding: 0;
+}
+
+/* alternate screen dimension styling */
+@media screen and (max-width: 1180px) {
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: var(--m);
+        padding: var(--m);
     }
 
-        .current-weather-header {
-            /* border: solid black 2px; */
-            background-color: rgb(14, 139, 201);
-            margin: 5px;
-            display: flex;
-            align-items: center;
-        }
-
-        .current-weather-header h3 {
-            margin: 5px 15px;
-        }
-
-        .current-weather-header p {
-            /* border: 2px solid black; */
-            margin: 5px;
-        }
-
-        /* these also styles elements in forecast */
-        .list-group {
-            list-style: none;
-            margin: 5px;
-            /* border: 2px solid black; */
-            padding: 0;
-        }
-        
-            .list-group-item {
-                margin: 5px;
-                padding: 5px;
-                /* border: 2px solid black; */
-            }
-
-
-
-
-    .forecast {
-        border: solid black 5px;
-        background-color: rgb(164, 29, 141);
-        margin: 5px;
-        padding: 5px;
+    .form-input,
+    .search-btn {
+        border: 2px solid var(--pink);
+        border-radius: 10px;
+        margin: var(--m);
+        padding: 5px 15px;
     }
 
-        .forecast h3 {
-            display: flex;
-            justify-content: center;
-            color: white;
-            font-size: 200%;
-            /* border: 2px solid black; */
-            margin: 10px;
-            padding: 5px;
-        }
+    .forecast-card {
+        background-color: var(--yellow);
+        border: 3px var(--border);
+        margin: var(--m);
+        padding: var(--m);
+        width: 40%;
+    }
 
-        .card-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            border: solid black 2px;
-            background-color: rgb(14, 139, 201);
-            color: white;
-            margin: 5px;
-            padding: 5px;
-        }
+    .icon {
+        width: 50%;
+        margin: 0 25%;
+        padding: 0;
+    }
+}
 
-            .forecast-card {
-                border: solid black 2px;
-                background-color: rgb(255, 208, 0);
-                margin: 5px;
-                padding: 5px;
-                width: 15%;
-            }
+@media screen and (max-width: 900px) {
+    /* sidebar section */
+    .sidebar {
+        border: var(--m) var(--border);
+        background-color: var(--blue);
+        margin: var(--m);
+        width: 30%;
+    }
+    /* searched city display section */
+    .searched-city {
+        border: var(--m) var(--border);
+        background-color: var(--yellow);
+        margin: var(--m);
+        padding: var(--m);
+        width: 70%;
+    }
+}
 
-            .card-title {
-                display: flex;
-                justify-content: center;
-                /* border: 2px solid black; */
-                margin: 10px 5px;
-                padding: 5px;
-            }
+@media screen and (max-width: 760px) {
+    .forecast-card {
+        background-color: var(--yellow);
+        border: 3px var(--border);
+        margin: var(--m);
+        padding: var(--m);
+        width: 70%;
+    }
+
+    .icon {
+        width: 40%;
+        margin: 0 30%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* sidebar section */
+    .sidebar {
+        border: var(--m) var(--border);
+        background-color: var(--blue);
+        margin: var(--m);
+        width: 40%;
+    }
+    /* searched city display section */
+    .searched-city {
+        border: var(--m) var(--border);
+        background-color: var(--yellow);
+        margin: var(--m);
+        padding: var(--m);
+        width: 60%;
+    }
+    .forecast-card {
+        background-color: var(--yellow);
+        border: 3px var(--border);
+        margin: var(--m);
+        padding: var(--m);
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .form-input {
+        border: 2px solid var(--pink);
+        border-radius: 10px;
+        margin: var(--m);
+        padding: 5px 15px;
+        width: 80%;
+    }
+
+    .forecast-card {
+        background-color: var(--yellow);
+        border: 3px var(--border);
+        margin: var(--m);
+        padding: var(--m);
+        width: 90%;
+    }
+}
