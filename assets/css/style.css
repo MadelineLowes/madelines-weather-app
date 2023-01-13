@@ -93,8 +93,8 @@ body {
 .searched-city {
     border: var(--m) var(--border);
     background-color: var(--yellow);
-    margin:  var(--m);
-    padding:  var(--m);
+    margin: var(--m);
+    padding: var(--m);
     width: 75%;
 }
 
@@ -124,8 +124,8 @@ body {
 }
 
 .iconHeader {
-    height: 40px;
-    width: 40px;
+    height: 20%;
+    padding: 0;
 }
 
 /* these also styles elements in forecast */
@@ -139,7 +139,8 @@ body {
 .list-group-item {
     margin: var(--m);
     padding: var(--m);
-    font-size: 110%;
+    font-size: 100%;
+    border: solid black 2px;
 }
 
 /* forecast styling */
@@ -154,7 +155,7 @@ body {
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 200%;
+    font-size: 170%;
     margin: 10px;
     padding: var(--m);
 }
@@ -182,7 +183,7 @@ body {
     justify-content: center;
     margin: 5px 0px;
     padding: var(--m);
-    font-size: 125%;
+    font-size: 120%;
 }
 
 .icon {
@@ -192,7 +193,27 @@ body {
 }
 
 /* alternate screen dimension styling */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1618px) {
+    .forecast-card {
+        background-color: var(--yellow);
+        border: 3px var(--border);
+        margin: var(--m);
+        padding: var(--m);
+        width: 25%;
+    }
+
+    .icon {
+        width: 30%;
+        margin: 0 35%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .sidebar-header {
+        font-size: 170%;
+    }
+
     .form {
         display: flex;
         flex-wrap: wrap;
@@ -209,6 +230,11 @@ body {
         padding: 5px 15px;
     }
 
+    .form-input {
+        width: 80%;
+    }
+
+
     .forecast-card {
         background-color: var(--yellow);
         border: 3px var(--border);
@@ -218,47 +244,14 @@ body {
     }
 
     .icon {
-        width: 50%;
-        margin: 0 25%;
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    /* sidebar section */
-    .sidebar {
-        border: var(--m) var(--border);
-        background-color: var(--blue);
-        margin: var(--m);
         width: 30%;
-    }
-    /* searched city display section */
-    .searched-city {
-        border: var(--m) var(--border);
-        background-color: var(--yellow);
-        margin: var(--m);
-        padding: var(--m);
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    .forecast-card {
-        background-color: var(--yellow);
-        border: 3px var(--border);
-        margin: var(--m);
-        padding: var(--m);
-        width: 70%;
-    }
-
-    .icon {
-        width: 40%;
-        margin: 0 30%;
+        margin: 0 35%;
         padding: 0;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1040px) {
+
     /* sidebar section */
     .sidebar {
         border: var(--m) var(--border);
@@ -266,6 +259,11 @@ body {
         margin: var(--m);
         width: 40%;
     }
+
+    .sidebar-header {
+        font-size: 160%;
+    }
+
     /* searched city display section */
     .searched-city {
         border: var(--m) var(--border);
@@ -274,6 +272,42 @@ body {
         padding: var(--m);
         width: 60%;
     }
+
+    .forecast-card {
+        background-color: var(--yellow);
+        border: 3px var(--border);
+        margin: var(--m);
+        padding: var(--m);
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        font-size: 90%;
+    }
+
+    /* sidebar section */
+    .sidebar {
+        border: var(--m) var(--border);
+        background-color: var(--blue);
+        margin: var(--m);
+        width: 40%;
+    }
+
+    .sidebar-header {
+        font-size: 130%;
+    }
+
+    /* searched city display section */
+    .searched-city {
+        border: var(--m) var(--border);
+        background-color: var(--yellow);
+        margin: var(--m);
+        padding: var(--m);
+        width: 60%;
+    }
+
     .forecast-card {
         background-color: var(--yellow);
         border: 3px var(--border);
@@ -283,20 +317,51 @@ body {
     }
 }
 
-@media screen and (max-width: 535px) {
-    .form-input {
-        border: 2px solid var(--pink);
-        border-radius: 10px;
-        margin: var(--m);
-        padding: 5px 15px;
-        width: 80%;
-    }
-
+@media screen and (max-width: 565px) {
     .forecast-card {
         background-color: var(--yellow);
         border: 3px var(--border);
         margin: var(--m);
         padding: var(--m);
         width: 90%;
+    }
+
+    .current-weather-header {
+        background-color: var(--blue);
+        margin: var(--m);
+        display: flex;
+        align-items: center;
+        font-size: 130%;
+    }
+
+    .current-weather-header h3 {
+        margin: var(--m);
+    }
+
+    .current-weather-header p {
+        margin: 0;
+    }
+
+    .iconHeader {
+        width: 25%;
+        margin: 0 0 0 -5px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .header {
+        font-size: 80%;
+    }
+
+    .iconHeader {
+        height: 10%;
+        margin: 0 0 0 -5px;
+        padding: 0;
+    }
+
+    .forecast h3 {
+        font-size: 140%;
+        margin: 0;
     }
 }
