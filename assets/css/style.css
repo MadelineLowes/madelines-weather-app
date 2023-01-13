@@ -140,7 +140,6 @@ body {
     margin: var(--m);
     padding: var(--m);
     font-size: 100%;
-    border: solid black 2px;
 }
 
 /* forecast styling */
