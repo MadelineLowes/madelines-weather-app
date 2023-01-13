@@ -23,9 +23,7 @@ https://madelinelowes.github.io/madelines-weather-app/
 To use this application, once the webpage has been opened, the user can type a city name into the search bar on the left side of the screen with a placeholder, "Toronto", and clicking the button titled "Search". The application will fetch the city's weather & forecasted weather for the following 5 days. The city names are stored in a list beneath the search bar to allow for easy weather searches.
 
 Application demonstration can be seen in the video linked below:
-
-PROVIDE SCREEN RECORDING
-
+https://drive.google.com/file/d/1bqI4SOwQiq30NU1rrNVx82BjZprbOi7A/view
                 
 ## Credits 
 https://demos.jquerymobile.com/1.0a2/experiments/api-viewer/docs/attr/index.html
