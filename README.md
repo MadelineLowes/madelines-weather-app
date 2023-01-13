@@ -17,9 +17,7 @@ https://openweathermap.org/forecast5
     
 ## Installation 
 This application runs in the browser and can simply be installed by following the URL below to it's webpage:
-
-PROVIDE WEB LINK URL
-
+https://madelinelowes.github.io/madelines-weather-app/
 
 ## Usage 
 To use this application, once the webpage has been opened, the user can type a city name into the search bar on the left side of the screen with a placeholder, "Toronto", and clicking the button titled "Search". The application will fetch the city's weather & forecasted weather for the following 5 days. The city names are stored in a list beneath the search bar to allow for easy weather searches.
