@@ -13,7 +13,7 @@ https://openweathermap.org/forecast5
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Quesitons](#questions)
+- [Questions](#questions)
     
 ## Installation 
 This application runs in the browser and can simply be installed by following the URL below to it's webpage:
